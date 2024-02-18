@@ -1,0 +1,29 @@
+{% if section.settings['show-announcement'] %}
+  <section> 
+    <div class="announcement-bar"></div>
+      <div class="announcement-bar-left-section"></div>
+
+      <div class="announcement-bar-right-section"></div>
+  </section>
+{%  endif %}
+
+{% schema %}
+{
+  "name" : "Announcement Bar",
+  "settings": [
+    {
+      "type" : "checkbox",
+      "id" : "show-announcement",
+      "label" : "Show Annoucement",
+      "default" : true
+    },
+    {
+      "type" : "image_picker",
+      "id" : "image_picker",
+      "label" : "pick image",
+      "info" : "" 
+    }
+  ],
+  "presets" : []
+}
+{% endschema %}
