@@ -1,0 +1,29 @@
+{
+  "current": {
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "links_QQCiAB": {
+            "type": "links",
+            "settings": {
+              "text": "link",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "links_QQCiAB"
+        ],
+        "settings": {
+          "show-announcement": true,
+          "background": "#73706f",
+          "text_color": "#000000"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  }
+}
