@@ -20,6 +20,14 @@ body {
     display: flex;
     align-items: center;
 
+
+ }
+
+ .announcement-bar-right-section {
+    display: flex;
+    align-items: center;
+    height: full;
+
  }
 
  .announcement-bar-inner-list {
