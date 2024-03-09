@@ -573,6 +573,10 @@ video {
   margin-top: 0.75rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .block {
   display: block;
 }
@@ -750,6 +754,24 @@ video {
 @media not all and (min-width: 1024px) {
   .max-lg\:hidden {
     display: none;
+  }
+
+  .max-lg\:gap-1 {
+    gap: 0.25rem;
+  }
+
+  .max-lg\:gap-2 {
+    gap: 0.5rem;
+  }
+
+  .max-lg\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .max-lg\:px-1 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
   }
 }
 
