@@ -2,17 +2,18 @@
   <section>
     <div class="announcement-bar">
       <div class="announcement-bar-left-section">
-        {%- if section.settings.image2 != blank -%}
+        {%- if section.settings.image != blank -%}
           <img
             width="40"
             height="40"
             loading="lazy"
-            src="{{ section.settings.image2 | image_url }}"
+            src="{{ section.settings.image | image_url }}"
           >
         {%- else -%}
           <img
-            width="40"
-            height="40"
+            class="rounded-full opacity-50"
+            width="20"
+            height="20"
             loading="lazy"
             src="{{ 'a.png' | asset_url }}"
           >
@@ -41,9 +42,8 @@
 
           {%- else -%}
               {% for block in section.blocks %}
-                <li class="flex justify-center gap-8 mr-20">
-                  <a href="{{ block.settings.link }}">{{ block.settings.text | escape }}</a>
-                  <a href="{{ block.settings.link }}">{{ block.settings.text | escape }}</a>
+                <li class="flex justify-center gap-2 mr-20">
+                  <a class="text-lg" href="{{ block.settings.link }}">{{ block.settings.text | escape }}</a>
                 </li>
               {% endfor %}
           {%- endif -%}
@@ -81,16 +81,10 @@
       "info": "400 x 120px .png recommended"
     },
     {
-      "type": "image_picker",
-      "id": "image2",
-      "label": "image2",
-      "info": "400 x 120px .png recommended"
-    },
-    {
       "type": "color",
       "id": "background",
       "label": "Background",
-      "default": "#F4F4F4"
+      "default": "#000000"
     },
     {
       "type": "color",
@@ -103,7 +97,7 @@
     {
       "name": "Links",
       "type": "links",
-      "limit": 4,
+      "limit": 6,
       "settings": [
         {
           "type": "text",
