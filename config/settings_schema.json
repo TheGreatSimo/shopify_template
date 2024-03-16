@@ -1,3 +1,14 @@
 [
+  {
+    "name" : "Corlos",
+    "settings" : [
+      {
+        "type" : "color",
+        "id" : "bg",
+        "label" : "Background color",
+        "default" : "#ffffff"
+      }
+    ]
+  }
 
 ]
