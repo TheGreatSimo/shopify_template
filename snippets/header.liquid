@@ -1,13 +1,26 @@
 <header class="flex justify-between max-container px-10 max-lg:px-2 ">
   <div>
-    <a href="/">
-      <img 
-        width="120"
-        height="70"
-        loading="lazy"
-        class="mt-2"
-        src="{{ 'nike.png' | asset_url }}" >
-    </a>
+    {% if section.settings.image0 != blank  %}
+      <a href="/" id="image0">
+        <img 
+          class="mt-1"
+          width="120"
+          height="70"
+          loading="lazy"
+          src="{{ section.settings.image0 | image_url }}"
+        />
+      </a>
+    {% else %}
+      <a href="/" id="image0">
+        <img 
+          class="mt-1"
+          width="120"
+          height="70"
+          loading="lazy"
+          src="{{ 'nike.png' | asset_url}}"
+        />
+      </a>
+    {% endif %}
 
   </div>
     <ul class="flex justify-center gap-8 items-center max-md:hidden  ">
@@ -31,29 +44,36 @@
         </a>
       </div>
 
-      <a href="/" class="bg-transparent rounded-full h-[50px] w-[50px] relative shadow-md cursor-pointer transition-transform duration-300 transform hover:scale-110 flex justify-center items-center max-md:hidden ">
+    {% if section.settings.search %}
+      <a id="search" href="/" class="bg-transparent rounded-full h-[50px] w-[50px] relative shadow-md cursor-pointer transition-transform duration-300 transform hover:scale-110 flex justify-center items-center max-md:hidden ">
         <img 
           width="20"
           height="20"
           loading="lazy"
           src="{{ 'search.png' | asset_url }}" >
       </a>
-      <a href="/" class="bg-transparent rounded-full h-[50px] w-[50px] relative shadow-md cursor-pointer transition-transform duration-300 transform hover:scale-110 flex justify-center items-center max-md:hidden " >
+    {% endif %}
+
+    {% if section.settings.account %}
+      <a id="account" href="/" class="bg-transparent rounded-full h-[50px] w-[50px] relative shadow-md cursor-pointer transition-transform duration-300 transform hover:scale-110 flex justify-center items-center max-md:hidden " >
         <img 
           width="20"
           height="20"
           loading="lazy"
           src="{{ 'acc.png' | asset_url }}" >
       </a>
-      <a href="/" class="bg-transparent rounded-full h-[50px] w-[50px] relative shadow-md cursor-pointer transition-transform duration-300 transform hover:scale-110 flex justify-center items-center  " >
+    {% endif %}
+
+
+    {% if section.settings.shop %}
+      <a id="shop" href="/" class="bg-transparent rounded-full h-[50px] w-[50px] relative shadow-md cursor-pointer transition-transform duration-300 transform hover:scale-110 flex justify-center items-center  " >
         <img 
           width="30"
           height="30"
           loading="lazy"
           src="{{ 'buy.png' | asset_url }}" >
       </a>
+    {% endif %}
 
   </div>
 </header>
-
-

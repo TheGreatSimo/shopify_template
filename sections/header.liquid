@@ -3,11 +3,37 @@
 </nav>
 
 
+
 {% schema %}
   {
-    "name": "Navbar",
-    "settings": [],
-    "presets": []
-
+    "name" : "Header",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image0",
+        "label": "image 0",
+        "info": "120 x 70px .svg recommended"
+      },
+      {
+        "type":"checkbox",
+        "id": "search",
+        "label" : "Show Search",
+        "default" : true 
+      },
+      {
+        "type":"checkbox",
+        "id": "account",
+        "label" : "Show Account",
+        "default" : true 
+      },
+      {
+        "type":"checkbox",
+        "id": "shop",
+        "label" : "Show Shop",
+        "default" : true 
+      }
+    ]
   }
+
 {% endschema %}
+
